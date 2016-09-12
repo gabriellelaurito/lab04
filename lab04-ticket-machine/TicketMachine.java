@@ -75,4 +75,9 @@ public class TicketMachine
         // Clear the balance.
         balance = 0;
     }
+    
+    public void empty()
+    {
+        balance = 0;
+    }
 }
