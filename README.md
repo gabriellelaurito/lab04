@@ -36,7 +36,9 @@ public void discount(int amount)
 ```
 System.out.println("My cat has green eyes.");
 ```
+
 My cat had green eyes.
+
 ## Add a method called `prompt` to the `TicketMachine` class in the `lab04-ticket-machine`. This should have a `void` return type and take no parameters. The body of the method should print the following single line of output: 
 ```
 Please insert the correct amount of money.
@@ -46,27 +48,35 @@ Please insert the correct amount of money.
 ```
 System.out.println("# " + "price" + " cents.");
 ```
+
 # price cents.
+
 ## What would be printed here?
 ```
 System.out.println("# price cents.");
 ```
+
 # price cents.
+
 ## Could either of the previous two versions be used to show the price of tickets in different ticket machines? Explain your answer.
 No, the two versions will print the line directly as # price cents. because of the quotation marks. If you take the quotation marks out, the computer will read it as a variable and print the price in the machine.
 ## Add a `showPrice` method to the `TicketMachine` class in the `lab04-ticket-machine`. This should have a void return type and take no parameters. The body of the method should print (here `xyz` should be replaced by the value held in the `price` field when the method is called):
 ```
 The price of a ticket is xyz cents.
 ```
+
 public void showPrice()
 {
 System.out.println("The price of a ticket is"+ price+" cents")
 }
+
 ## Create two ticket machines with differently priced tickets. Do calls to their showPrice methods show the same output, or different? How do you explain this effect?
+
 TicketMachine a = new TicketMachine(50)
 TicketMachine b = new TicketMachine(30)
 
 a.showPrice();
+
 b.showPrice();
 They show different outputs because they're prices are set to different numbers.
 ## Modify the constructor of `TicketMachine` in the `lab04-ticket-machine` so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1,000 cents. What effect does this have when you construct ticket-machine objects within BlueJ?
@@ -76,6 +86,7 @@ public TicketMachine(int value)(price = value;)
 
 public TicketMachine()(price = 200;)
 ## Implement a method, `empty`, that simulates the effect of removing all money from the machine. This method should have a `void` return type, and its body should simply set the `total` field to zero. Does this method need to take any parameters? Test your method by creating a machine, inserting some money, printing some tickets, checking the total, and then emptying the machine. Is the `empty` method a mutator or an accessor?
+
 {
 	balance = 0
 }
